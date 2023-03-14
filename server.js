@@ -31,7 +31,7 @@ app.get('/test', (request, response) => {
   response.send('test request received')
 });
 
-app.get('/cats', getBooks);
+app.get('/book', getBooks);
 async function getBooks(rec, res, next) {
   try{
     // mongoose documentation => queries
