@@ -13,7 +13,7 @@ async function seed() {
 		title: 'Nature Poem',
 		author: 'Tommy Pico',
 		release_date: 'May 09, 2017',
-		description: 'A book of poetry by Tommy Pico.',
+		description: 'An intriguing book of poetry by Tommy Pico.',
 	});
 	console.log("Nature Poem was added");
 
@@ -21,7 +21,7 @@ async function seed() {
 		title: 'Night Sky with Exit Wounds',
 		author: 'Ocean Vuong',
 		release_date: 'April 05, 2016',
-		description: 'A book of poetry by Ocean Vuong',
+		description: 'A delightful book of poetry by Ocean Vuong',
 	});
 	console.log("Night Sky with Exit Wounds was added");
 
@@ -37,7 +37,7 @@ async function seed() {
 		title: 'Postcolonial Love Poem',
 		author: 'Natalie Diaz',
 		release_date: 'March 03, 2020',
-		description: 'A book of poetry by Natalie Diaz',
+		description: 'A lovely book of poetry by Natalie Diaz',
 	});
 	console.log("Postcolonial Love Poem was added");
 
