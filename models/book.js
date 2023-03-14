@@ -7,6 +7,7 @@
 		release_date:
 		img_url:
 		description:
+		etc...
 	}
 */
 
@@ -28,4 +29,4 @@ const bookSchema = new Schema ({
 const BookModel = mongoose.model('Book', bookSchema)
 
 // the server.js will have access to the functionality of the database
-module.export = BookModel;
+module.exports = BookModel;
