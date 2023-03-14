@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 // each book in the database will look like this...
 /*
@@ -15,13 +15,13 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 // this is the Schema aka the rules of what are allowed in the database
-const bookSchema = new Schema[{
+const bookSchema = new Schema ({
 	title: {type: String, required: true},
 	author: {type: String, required: true},
 	release_date: {type: String, required: false},
 	img_url: {type: String, required: false},
 	description: {type: String, required: true},
-}]
+});
 
 // define our model
 // this is the functionality of how we interact with the database
