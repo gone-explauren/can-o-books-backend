@@ -14,7 +14,7 @@ async function seed() {
 		title: 'Nature Poem',
 		author: 'Tommy Pico',
 		release_date: 'May 09, 2017',
-		status: 'Content Consumed (read)',
+		status: 'Content Consumed',
 		description: 'An intriguing book of poetry by Tommy Pico.',
 	});
 	console.log("Nature Poem was added");
@@ -23,7 +23,7 @@ async function seed() {
 		title: 'Night Sky with Exit Wounds',
 		author: 'Ocean Vuong',
 		release_date: 'April 05, 2016',
-		status: 'Content Consumed (read)',
+		status: 'Content Consumed',
 		description: 'A delightful book of poetry by Ocean Vuong',
 	});
 	console.log("Night Sky with Exit Wounds was added");
@@ -32,7 +32,7 @@ async function seed() {
 		title: 'When I Grow Up I Want to Be a List of Further Possibilities',
 		author: 'Chen Chen',
 		release_date: 'April 11, 2017',
-		status: 'Untouched, but Touchable (unread)',
+		status: 'Untouched, but Touchable',
 		description: 'A presumably compelling book of poetry by Chen Chen',
 	});
 	console.log("When I Grow Up I Want to Be a List of Further Possibilities was added");
@@ -41,7 +41,7 @@ async function seed() {
 		title: 'Malleus Maleficarum',
 		author: 'Henricus Institor',
 		release_date: '1487',
-		status: 'Information Absorbed through Telepathy (started and/or skimmed)',
+		status: 'Information Absorbed through Telepathy',
 		description: '"The Hammer of Witches," a medieval guide for hunting witches written by possibly the most pretentious motherfucker of the era.',
 	});
 	console.log("Malleus Maleficarum was added");
@@ -50,7 +50,7 @@ async function seed() {
 		title: 'Postcolonial Love Poem',
 		author: 'Natalie Diaz',
 		release_date: 'March 03, 2020',
-		status: 'Content Consumed (read)',
+		status: 'Content Consumed',
 		description: 'A lovely book of poetry by Natalie Diaz',
 	});
 	console.log("Postcolonial Love Poem was added");
