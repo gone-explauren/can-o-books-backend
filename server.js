@@ -34,30 +34,40 @@ app.get('/test', (request, response) => {
   response.send('test request received')
 });
 
-app.get('/book', getBooks);
+app.get('/books', getBooks);
 
 async function getBooks(rec, res, next) {
   try{
+
     // mongoose documentation => queries
     let results = await Book.find({});
     // send to frontend
     res.status(200).send(results);
+
   } catch(err) {
+
     console.error(err);
-    res.staus(404).send('This book does not exist.')
+    res.staus(404).send('This book does not exist.');
+    next(err)
+
   }
 };
 
-app.put('/book', postBooks);
+app.post('/books', postBooks);
 
-async function postBooks(rec, res, next) {
+async function postBooks(req, res, next) {
   try {
+
     // add books to database
     let createdBook = await Book.create(req.body);
     res.status(200).send(createdBook);
+
   } catch(err) {
+
     console.error(err);
-    res.staus(500).send('This book could not be added.')
+    res.staus(500).send('This book could not be added.');
+    next(err)
+
   }
 };
 
@@ -66,17 +76,22 @@ async function postBooks(rec, res, next) {
 // I access the value 637bceabc57c693faee21e8f with:
 // req.params.id
 // 'id' is the variable I declared here:
-app.delete('/book/:id', deleteBooks);
+app.delete('/books/:id', deleteBooks);
 
-async function deleteBooks(rec, res, next) {
+async function deleteBooks(req, res, next) {
   try {
+
     let id = req.params.id;
     // do not expect anything to be returned by findByIdAndDelete
     await Book.findByIdAndDelete(id);
     res.status(200).send('Book deleted');
+
   } catch(err) {
+
     console.error(err);
-    res.staus(404).send('This book could not be deleted.')
+    res.staus(404).send('This book could not be deleted.');
+    next(err)
+
   }
 };
 
