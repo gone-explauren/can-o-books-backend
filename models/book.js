@@ -21,7 +21,7 @@ const bookSchema = new Schema ({
 	author: {type: String, required: true},
 	release_date: {type: String, required: false},
 	status: {type: String, required: true},
-	img_url: {type: String, required: false},
+	// img_url: {type: String, required: false},
 	description: {type: String, required: true},
 });
 
