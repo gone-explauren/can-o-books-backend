@@ -95,6 +95,30 @@ async function deleteBooks(req, res, next) {
   }
 };
 
+app.put('/books/:id', putBook);
+
+async function putBook(req, res, next) {
+  try {
+
+    let id = req.params.id;
+    let updatedBook = req.body;
+
+    // findByIdAndUpdate method takes in 3 arguments:
+    // - 1. id of the thing in the database to update
+    // - 2. Updated data object
+    // - 3. options object
+    let updatedBookFromDatabase = await Book.findByIdAndUpdate(id, updatedBook, {new: true, overwrite: true});
+    res.status(200).send(updatedBookFromDatabase);
+
+  } catch (err) {
+
+    console.error(err);
+    res.status(500).send('Could not update Book');
+    next(err)
+
+  }
+}
+
 // app.get('/', (request, response) => {
 //   response.status(200).send('Welcome!');
 // });
