@@ -31,6 +31,3 @@ const BookModel = mongoose.model('Book', bookSchema)
 
 // the server.js will have access to the functionality of the database
 module.exports = BookModel;
-
-
-// TODO: Lab-14: add Login and Auth0
